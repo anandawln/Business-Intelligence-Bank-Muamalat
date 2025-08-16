@@ -1,1 +1,3 @@
-# bank-muamalat-business-intelligence-project
+## Requirements
+- Big Query
+- Looker Studio
