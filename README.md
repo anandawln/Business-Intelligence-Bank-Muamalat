@@ -5,3 +5,8 @@
 ## Challenge
 - Determine each primary key in the 4 datasets.
 - Determine the relationship between the four tables.
+
+## Dashboard
+<div align="center">
+<img width = "80%" src = "https://github.com/anandawln/Business-Intelligence-Bank-Muamalat/blob/main/assets/muamalat_bi.png">
+</div>
