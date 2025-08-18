@@ -9,6 +9,49 @@ A primary key is a unique attribute in a database table that is used to exclusiv
 - Primary key table Orders : OrderID
 - Primary key table ProductCategory : CategoryID
 
+```sql
+# TASK 1: DESCRIBE THE PRIMARY KEY
+# Customers Table
+SELECT CustomerID, COUNT(*) AS jumlah
+FROM `sales_dataset.Customers`
+GROUP BY CustomerID
+HAVING COUNT(*) > 1;
+
+SELECT COUNT(*) AS null_count
+FROM `sales_dataset.Customers`
+WHERE CustomerID IS NULL;
+
+#Orders Table
+SELECT OrderID, COUNT(*) AS jumlah
+FROM `sales_dataset.Orders`
+GROUP BY OrderID
+HAVING COUNT(*) > 1;
+
+SELECT COUNT(*) AS null_count
+FROM `sales_dataset.Orders`
+WHERE OrderID IS NULL;
+
+#Products Table
+SELECT ProdNumber, COUNT(*) AS jumlah
+FROM `sales_dataset.Products`
+GROUP BY ProdNumber
+HAVING COUNT(*) > 1;
+
+SELECT COUNT(*) AS null_count
+FROM `sales_dataset.Products`
+WHERE ProdNumber IS NULL;
+
+# ProductCategory Table
+SELECT CategoryID, COUNT(*) AS jumlah
+FROM `sales_dataset.ProductCategory`
+GROUP BY CategoryID
+HAVING COUNT(*) > 1;
+
+SELECT COUNT(*) AS null_count
+FROM `sales_dataset.ProductCategory`
+WHERE CategoryID IS NULL;
+```
+
 ## Relationship between tables
 - Determine each primary key in the 4 datasets.
 - Determine the relationship between the four tables.
