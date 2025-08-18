@@ -33,6 +33,18 @@ LEFT JOIN `sales_dataset.ProductCategory` pc ON p.Category = pc.CategoryID
 WHERE pc.CategoryID IS NULL AND p.Category IS NOT NULL;
 
 ```
+- Creating Relationship (Relationship Logic)
+```sql
+SELECT 
+    c.CustomerID, c.FirstName, o.OrderID, o.Quantity, p.ProdName, pc.CategoryName
+FROM `sales_dataset.Customers` c
+JOIN `sales_dataset.Orders` o ON c.CustomerID = o.CustomerID
+JOIN `sales_dataset.Products` p ON o.ProdNumber = p.ProdNumber
+JOIN `sales_dataset.ProductCategory` pc ON p.Category = pc.CategoryID
+LIMIT 10;
+
+```
+
 
 ## Table Master
 This MasterTable is created to make it easier to analyze in dashboards or business reports. This data can be used to calculate total sales, number of orders, and customer analysis by city or product category.
