@@ -1,3 +1,5 @@
+# 🎯 Sales Performance Analysis & Strategic Recommendations for Product Optimization
+
 ## Requirements
 - Big Query
 - Looker Studio
