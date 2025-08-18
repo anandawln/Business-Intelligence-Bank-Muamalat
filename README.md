@@ -72,3 +72,31 @@ ORDER BY o.Date ASC;
 <div align="center">
 <img width = "80%" src = "https://github.com/anandawln/Business-Intelligence-Bank-Muamalat/blob/main/assets/muamalat_bi.png">
 </div>
+
+## Sales Improvement Strategy
+
+### Summary of Current Performance
+- **Total Sales**: $1,754,750.57  
+- **Total Order Quantity**: 11,654  
+- **Insight**: The high value per unit indicates potential for significant margins.
+
+
+### High-Performing Product Categories
+- **Robots**: $743,505 (42.4% of total sales)  
+- **Drones & Robot Kits**: Main contributors to revenue  
+- **eBooks & Blueprints**: High orders, low value
+
+### Performance by City
+- **Washington & Houston**: High orders and large market potential  
+- **Strategy**: Target exclusive promotions and fast delivery services
+
+### Recommendations
+| Strategy                                                                 | Estimated Sales Increase    |
+|--------------------------------------------------------------------------|-----------------------------|
+| Focus on high-value products (Robots & Drones)                           | +12–18%                     |
+| Bundling & upselling eBooks & Blueprints                                 | +8–15%                      |
+| Exclusive promotions in high-sales cities                                | +10–14%                     |
+| Price adjustments & promotions for high-order low-revenue categories     | +6–10%                      |
+| **Total Potential Increase (synergistic)**                               | **+25–35%**                 |
+
+
