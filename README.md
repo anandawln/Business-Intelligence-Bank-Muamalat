@@ -13,6 +13,27 @@ A primary key is a unique attribute in a database table that is used to exclusiv
 - Determine each primary key in the 4 datasets.
 - Determine the relationship between the four tables.
 
+```sql
+#Verify the relationship between Customers and Orders (Foreign Key: CustomerID)
+SELECT o.CustomerID
+FROM `sales_dataset.Orders` o
+LEFT JOIN `sales_dataset.Customers` c ON o.CustomerID = c.CustomerID
+WHERE c.CustomerID IS NULL AND o.CustomerID IS NOT NULL;
+
+# Verify the relationship between Orders and Products (Foreign Key: ProdNumber)
+SELECT o.ProdNumber
+FROM `sales_dataset.Orders` o
+LEFT JOIN `sales_dataset.Products` p ON o.ProdNumber = p.ProdNumber
+WHERE p.ProdNumber IS NULL AND o.ProdNumber IS NOT NULL;
+
+# Verify the relationship between Products and ProductCategory (Foreign Key: Category)
+SELECT p.Category
+FROM `sales_dataset.Products` p
+LEFT JOIN `sales_dataset.ProductCategory` pc ON p.Category = pc.CategoryID
+WHERE pc.CategoryID IS NULL AND p.Category IS NOT NULL;
+
+```
+
 ## Table Master
 This MasterTable is created to make it easier to analyze in dashboards or business reports. This data can be used to calculate total sales, number of orders, and customer analysis by city or product category.
 
