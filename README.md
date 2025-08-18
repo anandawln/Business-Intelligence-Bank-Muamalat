@@ -37,6 +37,25 @@ WHERE pc.CategoryID IS NULL AND p.Category IS NOT NULL;
 ## Table Master
 This MasterTable is created to make it easier to analyze in dashboards or business reports. This data can be used to calculate total sales, number of orders, and customer analysis by city or product category.
 
+```sql
+#TASK 3: CREATE A MASTER TABLE
+CREATE TABLE `sales_dataset.MasterTable` AS
+SELECT 
+    o.Date AS order_date,
+    pc.CategoryName AS category_name,
+    p.ProdName AS product_name,
+    p.Price AS product_price,
+    o.Quantity AS order_qty,
+    (o.Quantity * p.Price) AS total_sales,
+    c.CustomerEmail AS cust_email,
+    c.CustomerCity AS cust_city
+FROM `sales_dataset.Orders` o
+JOIN `sales_dataset.Customers` c ON o.CustomerID = c.CustomerID
+JOIN `sales_dataset.Products` p ON o.ProdNumber = p.ProdNumber
+JOIN `sales_dataset.ProductCategory` pc ON p.Category = pc.CategoryID
+ORDER BY o.Date ASC;
+```
+
 ## Dashboard
 <div align="center">
 <img width = "80%" src = "https://github.com/anandawln/Business-Intelligence-Bank-Muamalat/blob/main/assets/muamalat_bi.png">
